@@ -1,0 +1,103 @@
+#playPlay{
+    width:400px;
+}
+#playDeck{
+    justify-content: space-between;
+}
+#mainBot{
+    margin-top: 23px;
+}
+#playPlay{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    overflow: hidden;
+}
+#pPWrap{
+    background-color: #262522;
+    height:inherit;
+    width: 95%;
+    border-radius: 8px;
+    color: #f1f1f1;
+    position: relative;
+    overflow: hidden;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+#ppWh1{
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    position: relative;
+    z-index: 100;
+}
+#ppWh1Span{
+    font-size: 37px;
+}
+.playOnline{
+
+    position: relative;
+    z-index: 100;
+    width: 80%;
+    background-color: #2e2920;
+
+    font-weight: 1000;
+    color:white;
+    font-size:24px;
+    height:65px;
+    width: 290px;
+    
+    border:none;
+    border-radius: 9px;
+    box-shadow: #211e17 0px 4px;
+    transition: all 0.5s ease-in-out;
+    &:hover{
+        background-color:#524c4b;
+        
+    }
+    &:hover .loginShadow{
+        box-shadow: #524c4b 0px 0px 10px;
+        height:60px;
+        width: 280px;
+        position:absolute;
+        top:2.5px;
+        left:5px;
+        border-radius: 9px;
+    }
+}
+#pPTopCircle{
+    position: absolute;
+    top:-30%;
+    left:-95px;
+    width:150%;
+    background-color: #3b3a35;
+    height:300px;
+    border-radius: 50%;
+}
+.playElem{
+    top:70px;
+    left:80px;
+    position: absolute !important;
+}
+#online{
+    margin-top:100px ;
+    & img{
+        width:40px;
+        margin-right: 10px;
+    }
+}
+#offline{
+    margin-top:50px ;
+}
+.loading {
+  font-weight: bold;
+  display:inline-block;
+  font-family: monospace;
+  font-size: 30px;
+  clip-path: inset(0 3ch 0 0);
+  animation: l 1s steps(4) infinite;
+  position: relative;
+  top:260px;
+}

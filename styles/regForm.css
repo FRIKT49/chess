@@ -1,0 +1,197 @@
+@font-face {
+    font-family: main;
+    src: url(../fonts/Roboto.ttf);
+}
+html, body {
+    height: 100%;
+} 
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: #302e2b;
+    font-family: main;
+    background-image: url('../img/chessboard.png');
+    background-position: center;
+}
+
+#wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+input {
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    box-shadow: inset 0 0 0 100rem transparent;
+
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: main;
+    cursor: pointer;
+    background-color: #373532;
+    color: #d1d1d1;
+    transition: background-color 0.3s;
+    outline: none;
+
+    &:focus {
+        border-color: #666666;
+        /* Изменяем цвет рамки */
+        box-shadow: 0 0 5px rgba(54, 54, 54, 0.5);
+        /* Добавляем эффект */
+    }
+
+    border: 5px solid rgb(36, 36, 36);
+}
+
+input::placeholder {
+    font-size: 13px;
+    color: gray;
+    /* Можно также изменить цвет */
+}
+
+.regLog {
+    display: flex;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    justify-content: center;
+    top: -150px;
+    left: 95px;
+}
+
+.regLog>img {
+    position: relative;
+}
+
+.regForm {
+    width: 350px;
+    height: 400px;
+    padding: 20px;
+    margin: 20px;
+    background-color: #262421;
+    color: #d1d1d1;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    /* border:5px solid #3c3930; */
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.Chess {
+    width: 200px;
+}
+
+#emailImage {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    position: absolute;
+    top: 44px;
+    left: 40px;
+}
+
+#email{
+    padding-left: 50px;
+    top: 120px;
+    left: 65px;
+}
+#login{
+    background-color:#81b64c ;
+    font-weight: 1000;
+    color:white;
+    font-size:24px;
+    height:65px;
+    width: 290px;
+    top: 60px;
+    left:15px;
+    position: relative;
+    border:none;
+    border-radius: 9px;
+    box-shadow: #45753c 0px 4px;
+    transition: all 0.5s ease-in-out;
+    &:hover{
+        background-color:#a3d160;
+        
+    }
+    &:hover .loginShadow{
+        box-shadow: #a3d160 0px 0px 10px;
+        height:60px;
+        width: 280px;
+        position:absolute;
+        top:5px;
+        left:5px;
+        
+    }
+}
+#login span{
+    text-shadow: #262421 0px 0.5px;
+}
+#registrationForm{
+    height: 150px;
+}
+.regReg{
+    position: relative;
+    bottom: -96px;
+    height:60px;
+    font-weight: 600;
+    background-color: #211f1c;
+    line-height: 60px;
+    min-width:350px;
+    display: flex;
+    justify-content: center;
+    border-radius: 0px 0px 9px 9px;
+}
+.regLink{
+    text-decoration: none;
+    transition: color 0.3s;
+    color:#ccc;
+    &:hover{
+        color: white;
+    }
+}
+#passImage{
+    position: absolute;
+    top: 120px;
+    left: 40px;
+}
+#password{
+    padding-left:50px;
+}
+#repImage{
+    position:absolute;
+    top: 198px;
+    left: 41px;
+}
+#secPassword{
+    padding-left: 50px;
+    top: 120px;
+    left: 65px;
+}
+#Dog{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    position: absolute;
+    top: 117px;
+    font-size: 23px;
+    left: 43px;
+    font-weight: 900;
+    color: #d1d1d1;
+}
+#nick{
+    padding-left: 50px;
+    top: 120px;
+    left: 65px;
+}

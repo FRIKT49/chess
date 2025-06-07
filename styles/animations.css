@@ -1,0 +1,28 @@
+@keyframes kingRed {
+    0%{
+        background-color: rgba(233, 100, 100, 0.779);
+
+    }
+    20%{
+        background-color: rgba(233, 100, 100, 0);
+    }
+    40%{
+        background-color: rgba(233, 100, 100, 0.779);
+    }
+    60%{
+        background-color: rgba(233, 100, 100, 0);
+
+    }
+    80%{
+        background-color: rgba(233, 100, 100, 0.779);
+
+    }
+    100%{
+        background-color: rgba(233, 100, 100, 0);
+    }
+}
+@keyframes l {
+  to {
+    clip-path: inset(0 -1ch 0 0)
+  }
+}

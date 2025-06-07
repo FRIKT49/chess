@@ -1,0 +1,53 @@
+@font-face{
+    font-family: "SF";
+    src:url('../fonts/SF.otf');
+}
+
+body{
+    background-color: #2e2920;
+    font-family: SF;
+    color:rgb(233, 224, 224);
+}
+#wrap{
+    width: 1120px;
+    min-height: 300px;
+    /* outline: 1px solid red; */
+    margin :auto;
+    margin-top: 50px;
+    background-color: #2b2a25;
+    border:3px solid #1a1916;
+    border-radius: 15px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 0px 20px;
+}
+.wrapH1{
+    margin-top: 20px;
+    font-size: 40px;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.wrapH2{
+    margin-top: 20px;
+    font-size: 30px;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+#Exit{
+    margin-top: 20px;
+    font-size: 30px;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    & button{
+        width: 100px;
+        height:40px;
+        padding-top: 3px;
+        font-size: 20px;
+    }
+}

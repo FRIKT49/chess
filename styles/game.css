@@ -1,0 +1,53 @@
+#playDeck,#deck{
+    width:800px;
+    height:800px;
+}
+#playDeck{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#topLine{
+    height: 40px;
+    margin-top: 5px;
+}
+.userInfo{
+    display: flex;
+    align-items: center;
+    width:200px;
+    height:40px;
+    & span{
+        color: #f1f1f1;
+        margin-left:10px;
+        font-size: 17px;
+
+    }
+}
+#inti{
+    position: absolute;
+    left:7px;
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    user-select: none;
+}
+#letti{
+    position: absolute;
+    left:-7px;
+    bottom:0px;
+    width:100%;
+    display: flex;
+    user-select: none;
+}
+.let{
+    font-family: chess;
+    font-size: 20px;
+    color: #739552;
+}
+.int{
+    font-family: chess;
+    font-size: 20px;
+    color: #739552;
+}
+#deck{
+    transform: rotate(180deg);
+}

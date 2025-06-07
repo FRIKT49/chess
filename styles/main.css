@@ -1,0 +1,213 @@
+@font-face{
+    font-family: "SF";
+    src:url('../fonts/SF.otf');
+}
+@font-face{    
+    font-family:"chess";
+    src: url('../fonts/chess.ttf');
+}
+a{
+    text-decoration: none;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: #302e2b;
+    font-family: SF;
+    display: flex;
+} 
+.alert{
+    position:absolute;
+    width:600px;
+    left:39%;
+    transition: all 0.7s ease-in-out;
+    cursor: pointer;
+}
+#sideBar{
+    height:100%;
+
+    background-color: #262522;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0 0 240px;
+}
+#sideTopWrap{
+    padding-left:20px;
+}
+#sideBotWrap{
+    padding-left: 8px;
+}
+.sideElem{
+    margin:20px 0px;
+    display: flex;
+    align-items: center;
+}
+#logo{
+    margin-top:10px;
+    & img{
+        width:80%;
+    }
+}
+#play{
+    & img{
+        width:45px;
+        position: relative;
+        left:-10px;
+    }
+    span{
+        color: #d1d1d1;
+        font-size:25px;
+        padding-top: 5px;
+        margin-left: -5px;
+    }
+} 
+
+#you{
+    & img{
+        width:40px;
+        position: relative;
+        left:-10px;
+    }
+    & span{
+        color: #d1d1d1;
+        font-size:25px;
+        padding-top: 5px;
+    }
+}
+
+#news{
+    & img{
+        width:40px;
+        position: relative;
+        left:-10px;
+    }
+    & span{
+        color: #d1d1d1;
+        font-size:25px;
+        padding-top: 5px;
+    }
+}
+
+#switch{
+    & span{
+        color:gray;
+        font-size: 17px;
+    }
+    & img{
+        width: 30px;
+    }  
+}
+#set{
+    margin-left: 3px;
+    &   span{
+        color:gray;
+        font-size: 17px;
+        margin-left: 5px;
+    }
+    & img{
+        width: 20px;
+        opacity: 0.5;
+        margin-top: -2px;
+    }
+}
+
+#mainWrap{
+    min-height:820px;
+    width:1120px;
+}
+#mainBar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.userInfo{
+    display: flex;
+    align-items: center;
+    width:300px;
+    height:60px;
+    & span{
+        color: #f1f1f1;
+        margin-left:10px;
+        font-size: 20px;
+
+    }
+}
+#userImg{
+    width:45px;
+    border-radius:5px;
+}
+
+#topLine{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+#topRight{
+    height:60px;
+
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    & img{
+        opacity: 0.5;
+        width:33px;
+    }
+}
+
+#playDeck{
+    margin-top: 30px;
+    display:flex;
+
+    justify-content: center;
+}
+
+#deck{
+    background-image: url('../img/deck.png');
+    width:700px;
+    height:700px;
+    background-size: 100% 100%;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+#inti{
+    position: absolute;
+    left:7px;
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    user-select: none;
+}
+#letti{
+    position: absolute;
+    left:-7px;
+    bottom:0px;
+    width:100%;
+    display: flex;
+    user-select: none;
+}
+.let{
+    font-family: chess;
+    font-size: 20px;
+    color: #739552;
+}
+.int{
+    font-family: chess;
+    font-size: 20px;
+    color: #739552;
+}
+
+.figure{
+    position:absolute;
+    z-index: 0;
+    
+}
+#playPlay{
+    height:700px;
+    width:0px;
+}
