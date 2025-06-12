@@ -121,6 +121,6 @@ if ($_GET['nick']) {
                 'queue' => $queue
             ]);
         }
+        
     }
-
 }

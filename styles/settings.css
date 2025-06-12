@@ -21,6 +21,8 @@ body{
     justify-content: flex-start;
     flex-direction: column;
     padding: 0px 20px;
+    position: relative;
+    gap: 20px;
 }
 .wrapH1{
     margin-top: 20px;
@@ -38,11 +40,11 @@ body{
     display: flex;
     justify-content: flex-start;
 }
-#Exit{
-    margin-top: 20px;
+
+.setBlockBtn{
     font-size: 30px;
-    height: 30px;
-    width: 100%;
+
+
     display: flex;
     & button{
         width: 100px;
@@ -50,4 +52,33 @@ body{
         padding-top: 3px;
         font-size: 20px;
     }
+    
+    width:100px;
+}
+.setBlock{
+    border: rgb(233, 224, 224) solid 3px;
+    border-radius: 11px;
+    padding: 10px;
+}
+#name{
+    height: 60px;
+    width: 100%;
+    font-size: 30px;
+    display: flex;
+    gap: 10px;
+}
+#Exit{
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    
+}
+#return{
+    position: absolute;
+    top:25px;
+    right: 25px;
+    color:rgb(233, 224, 224);
+}
+#redact{
+
 }

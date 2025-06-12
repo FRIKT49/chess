@@ -57,7 +57,7 @@
                                     $_SESSION['name'] = $name;
                                 }
                                 
-                                relocationToMain();
+                                Relocations::toMain();
                             }else $error = "Password verification failed";
                         }
                     }else $error = "Неправельный логин или ник";
@@ -69,6 +69,6 @@
             
         }
     }else{
-        relocationToMain();
+        Relocations::toMain();
     }
     include 'temp/regLog.php';

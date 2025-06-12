@@ -1,4 +1,5 @@
 <?php
+	
     if(!defined('ENGINE')){
 		die("Hack no attempt!");
 	}
@@ -23,6 +24,7 @@
 	function getVar($name){
 		return $GLOBALS[$name];
 	}
+
 	function varFilter($v){
 		global $db;
 		return mysqli_real_escape_string($db, $v);
@@ -41,10 +43,28 @@
 		$_SESSION['id']=null;
 		$_SESSION['name']=null;
 	}
-	function getUserId(){
-		return (int) $_SESSION['id'];
+	
+	class SessionFunc{
+		public static function getUserId(){
+			return (int) $_SESSION['id'];
+		}
+		public static function getUserName(){
+			return $_SESSION['name'];
+		}
 	}
-	function relocationToMain(){
-		header('Location: /?site=main');
+	class Relocations{
+		public static function toMain(){
+			header('Location: /?site=main');
+		}
+		public static function toReg(){
+			header('Location: /?site=reg');
+		}
+		public static function toProfile(){
+			header('Location: /?site=profile');
+		}
+		public static function toError($error){
+			header("Location: /?site=error&error={$error}");
+		}
 	}
+
 ?>

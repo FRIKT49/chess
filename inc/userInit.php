@@ -1,7 +1,7 @@
 <?
 
     if(isLog()){
-		$selectUserInfoSQL = "SELECT * FROM `users` WHERE id = ".getUserId();
+		$selectUserInfoSQL = "SELECT * FROM `users` WHERE id = ".SessionFunc::getUserId();
 		
 		$result = mysqli_query($db, $selectUserInfoSQL);
 		if(mysqli_num_rows($result)){
