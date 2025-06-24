@@ -51,6 +51,9 @@
 		public static function getUserName(){
 			return $_SESSION['name'];
 		}
+		public static function getUserAvatar(){
+			return $_SESSION['avatar'] ? $_SESSION['avatar'] : '/img/default-avatar.svg';
+		}
 	}
 	class Relocations{
 		public static function toMain(){

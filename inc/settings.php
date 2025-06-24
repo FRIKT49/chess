@@ -25,4 +25,6 @@ if (isset($_POST['logout'])) {
     Relocations::toReg();
     exit;
 }
+
 include 'temp/settings.php';
+include 'inc/avatar.php';

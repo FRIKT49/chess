@@ -25,8 +25,8 @@ if ($_GET) {
 		}
 	}
 }else{
-	if(isLog()) relocationToMain();
-	else header('Location: /?site=main');
+	if(isLog()) Relocations::ToMain();
+	else header('Location: /?site=reg');
 }
 
 

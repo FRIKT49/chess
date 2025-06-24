@@ -33,8 +33,8 @@
         const searching = $('<div class="loading">Loading...</div>')
         $('#pPWrap').append(searching)
 
-        // findGame('./inc/findGame.php/?nick=' + name)
-        console.log('./inc/findGame.php/');
+
+
 
     }
 </script>
