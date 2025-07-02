@@ -24,19 +24,14 @@ if (!defined('ENGINE')) {
 
         <div id="Profile" class="setBlock">
             <div id="avatar">
-                <img src="<?= SessionFunc::getUserAvatar() ?>" alt="">
+                <img src="<?= getAvatar(SessionFunc::getUserId()) ?>" alt="">
             </div>
-            <form enctype="multipart/form-data" method="post">
-                <p><input type="file" name="f" id="fileInput">
-                    <input type="submit" value="Отправить">
-                </p>
-            </form>
+            <input type="file" name="f" id="fileInput">
             <div id="name"><?= SessionFunc::getUserName() ?><div id="redact"><img src="./img/redact.svg" width="20px"></div>
             </div>
             <div id="Save" class="setBlockBtn">
                 <form action="/?site=profile" method="post">
-
-                    <button type="submit" class="btn btn-primary">Profile</button>
+                    <button type="submit" class="btn btn-primary">Save</button>
                 </form>
             </div>
         </div>
@@ -47,8 +42,18 @@ if (!defined('ENGINE')) {
 
         </div>
     </div>
-    <script src="./js/avatar.js"></script>
-        
+    <?include './js/avatar.php'?>
+    <script>
+        $('#redact img').click(function() {
+            let name =  $("#name");
+            let nameValue = name.text().replace(/\s/g, '');
+            console.log(nameValue);
+            name.html(`
+                <input type="text" id="nameInput" value="${nameValue}">
+                <button id="saveName" class="btn btn-success">Save</button>
+            `);
+        });
+    </script>    
 
 </body>
 

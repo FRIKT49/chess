@@ -69,8 +69,12 @@
         }`
 
         const emailValidator = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        const upperCaseRegex = /[A-Z]/;
+        const lowerCaseRegex = /[a-z]/;
+        const rusCaseRegex = /[А-яа-я]/;
+        const numberRegex = /[0-9]/;
+        const specialCharRegex = /[@#$%&*!]/;
 
-       
         function validatePassword() {
 
 
@@ -78,7 +82,7 @@
             console.log(password.value);
             console.log(upperCaseRegex.test(password));
             console.log(lowerCaseRegex.test(password));
-            if (password.length < minLength || password.length > maxLength) {
+            if (password.length < 16 || password.length > 8) {
 
                 return "Пароль должен содержать не меньше 8 и не больше 16 символов!";
             }
@@ -116,13 +120,19 @@
   
             if(nick.value.length < 3){
                 error('danger',"В имени не может быть меньше 3 символов!",e);
+                console.log('go');
+                
             }
             if(nick.value.length > 20){
                 error('danger','В имени не может быть больше 16 символов!',e)
             }
             if (emailValidator.test(email.value)) {
-            } else {
+            }
+            else {
                 error('danger', 'Проверте правильность почты!',e);
+            }
+            if(rusCaseRegex.test(nick.value)){
+                error('danger', 'В имени должны быть только латинские буквы!',e);
             }
             if (!validatePassword()) {
 

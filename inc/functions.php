@@ -51,9 +51,7 @@
 		public static function getUserName(){
 			return $_SESSION['name'];
 		}
-		public static function getUserAvatar(){
-			return $_SESSION['avatar'] ? $_SESSION['avatar'] : '/img/default-avatar.svg';
-		}
+
 	}
 	class Relocations{
 		public static function toMain(){
@@ -69,5 +67,27 @@
 			header("Location: /?site=error&error={$error}");
 		}
 	}
+	function getAvatar($id){
+		global $db;
+		$id = (int)$id;
+		if ($id <= 0) {
+			return '/img/default-avatar.svg'; // Возвращаем путь к аватару по умолчанию
+		}
+		
+		$query = "SELECT `avatar` FROM `users` WHERE `id` = {$id}";
+		$result = mysqli_query($db, $query);
+		
+		if ($result && mysqli_num_rows($result) > 0) {
+			$row = mysqli_fetch_assoc($result);
+			if(!empty($row['avatar'])) {
+				// Если аватар существует, возвращаем его
+				return 'data:image/png;base64,' . base64_encode($row['avatar']);
+			} else {
+				return '/img/default-avatar.svg'; // Возвращаем путь к аватару по умолчанию, если аватар не установлен
+			}
+		} else {
+			return '/img/default-avatar.svg'; // Возвращаем путь к аватару по умолчанию, если пользователь не найден
+		}
 
+	}
 ?>

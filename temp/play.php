@@ -128,7 +128,7 @@ if (!defined('ENGINE')) {
             </div>
             <div id="mainBot">
                 <div class="userInfo">
-                    <img src="./img/schessUserImage.svg" id="userImg"><span><?= $userInfo['userName'].' ('.$userInfo['userRate'].')';
+                    <img src="<?= getAvatar(SessionFunc::getUserId()) ?>" id="userImg"><span><?= $userInfo['userName'].' ('.$userInfo['userRate'].')';
                      ?></span>
                 </div>
             </div>

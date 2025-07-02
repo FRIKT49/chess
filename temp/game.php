@@ -59,7 +59,7 @@ if (!defined('ENGINE')) {
         <div id="mainWrap">
             <div id="topLine">
                 <div class="userInfo">
-                    <img src="./img/schessUserImage.svg" id="userImg"><span><?= $usersInfo[1][0] ?>(<?= $usersInfo[0][1] ?>)</span>
+                    <img src="data:image/png;base64,<?= base64_encode($usersInfo[1][2]) ?>" id="userImg"><span><?= $usersInfo[1][0] ?>(<?= $usersInfo[1][1] ?>)</span>
                 </div>
                 <div id="topRight">
                     <a href="/?site=settings"><img src="./img/settings.png"></a>
@@ -109,7 +109,7 @@ if (!defined('ENGINE')) {
             </div>
             <div id="mainBot">
                 <div class="userInfo">
-                    <img src="./img/schessUserImage.svg" id="userImg"><span><?= $usersInfo[0][0] ?>(<?= $usersInfo[0][1] ?>)</span>
+                    <img src="data:image/png;base64,<?= base64_encode($usersInfo[0][2]) ?>" id="userImg"><span><?= $usersInfo[0][0] ?>(<?= $usersInfo[0][1] ?>)</span>
                 </div>
             </div>
         </div>

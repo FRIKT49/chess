@@ -51,7 +51,6 @@ if (!defined('ENGINE')) {
         document.body.append(style);
 
         const emailValidator = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
         
         registrationForm.addEventListener("submit", function(e) {
             console.log('нажал');

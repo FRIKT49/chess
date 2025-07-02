@@ -21,7 +21,7 @@ if ($_GET) {
 	} else {
 		if (empty($module)) $file = 'regLog';
 		else {
-			$error = 404;
+			Relocations::toMain();
 		}
 	}
 }else{

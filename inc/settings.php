@@ -26,5 +26,6 @@ if (isset($_POST['logout'])) {
     exit;
 }
 
+
 include 'temp/settings.php';
-include 'inc/avatar.php';
+// include 'inc/avatar.php';

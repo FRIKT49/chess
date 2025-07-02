@@ -59,7 +59,7 @@ if (!defined('ENGINE')) {
         <div id="mainWrap">
             <div id="topLine">
                 <div class="userInfo">
-                    <img src="./img/schessUserImage.svg" id="userImg"><span><?= $userInfo['userName'] ?></span>
+                    <img src="<?= getAvatar(SessionFunc::getUserId()) ?>" id="userImg"><span><?= $userInfo['userName'] ?></span>
                 </div>
                 <div id="topRight">
                     <a href="/?site=settings"><img src="./img/settings.png"></a>
