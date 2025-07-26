@@ -8,6 +8,10 @@ body{
     font-family: SF;
     color:rgb(233, 224, 224);
 }
+.alert{
+    position: absolute;
+    min-width: 1000px; 
+}
 #wrap{
     width: 1120px;
     min-height: 300px;
@@ -71,7 +75,7 @@ body{
 #Exit{
     position: absolute;
     bottom: 25px;
-    right: 25px;
+    right: 35px;
     
 }
 #return{

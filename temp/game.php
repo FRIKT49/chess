@@ -49,10 +49,12 @@ if (!defined('ENGINE')) {
                 <img src="./img/white.png">
                 <span>Switch mode</span>
             </div>
-            <div id="set" class="sideElem">
-                <img src="./img/settings.png">
-                <span>Settings</span>
-            </div>
+            <a href="/?site=settings">
+                <div id="set" class="sideElem">
+                    <img src="./img/settings.png">
+                    <span>Settings</span>
+                </div>
+            </a> 
         </div>
     </div>
     <div id="mainBar">

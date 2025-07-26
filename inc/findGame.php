@@ -3,10 +3,11 @@
 header('Content-Type: application/json');
 $dbConfig = [
     'host' => 'localhost',
-    'user' => 'cz22780_diplom',
+    'user' => 'cm36711_diplom',
     'password' => '@Roman2009',
-    'dbName' => 'cz22780_diplom'
+    'dbName' => 'cm36711_diplom'
 ];
+
     
 $db2 = mysqli_connect($dbConfig['host'], $dbConfig['user'], $dbConfig['password'], $dbConfig['dbName']);
 
@@ -66,16 +67,16 @@ if ($_GET['nick']) {
                 // Если ни один не существует — создаём новый
                 $gameFile = $gameFile1;
                 // Пример начальных данных для игры
-                $rand = rand(1, 2);
-                // $color1 = 'white';
-                // $color2 = 'black';
-                if ($rand == 1) {
-                    $color1 = 'white';
-                    $color2 = 'black';
-                } else {
-                    $color1 = 'black';
-                    $color2 = 'white';
-                }
+                // $rand = rand(1, 2);
+                // // $color1 = 'white';
+                // // $color2 = 'black';
+                // if ($rand == 1) {
+                //     $color1 = 'white';
+                //     $color2 = 'black';
+                // } else {
+                //     $color1 = 'black';
+                //     $color2 = 'white';
+                // }
 
 
                 $gameData = [
@@ -91,17 +92,13 @@ if ($_GET['nick']) {
                 (
                     `game_name`,
                     `id1`,
-                    `id2`,
-                    `id1color`,
-                    `id2color`
+                    `id2`
                 )
                 VALUES 
                 (
                     '{$gameFile}',
-                    '{$id1}',
-                    '{$id2}',
-                    '{$color1}',
-                    '{$color2}'
+                    '{$id1}'
+
                 )";
                 if (mysqli_query($db2, $SQL)) file_put_contents($gameFile, json_encode($gameData, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
             }

@@ -1,9 +1,6 @@
 <?php
 	
-    if(!defined('ENGINE')){
-		die("Hack no attempt!");
-	}
-	
+ 
 	
     function dump($var){
         echo "<pre style='position:absolute; top:300px; left:500px; color:white; z-index: 999999;' >";
@@ -51,6 +48,7 @@
 		public static function getUserName(){
 			return $_SESSION['name'];
 		}
+        
 
 	}
 	class Relocations{

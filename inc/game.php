@@ -17,7 +17,7 @@ foreach($usersId as $key => $id){
     // echo dump($nameQuery);
     $usersInfo[] = [$nameQuery['name'],$nameQuery['rating'],'avatar'=>$nameQuery['avatar']];
 }
-echo dump($_SESSION);
+
 if($usersInfo[1][0] == $_SESSION["name"]){
     $userName = $usersInfo[1][0];
     $userElo = $usersInfo[1][1];
@@ -36,7 +36,7 @@ if($usersInfo[1][0] == $_SESSION["name"]){
     $enemyAvatar = $usersInfo[1]['avatar'];
     $usersInfo=[[$userName,$userElo,$userAvatar],[$enemyName,$enemyElo,$enemyAvatar]];
 }
-echo dump($usersInfo);
+
 $json = file_get_contents('http://diplom/?site=game&game=38_1');
 $data = json_decode($json, true);
 
