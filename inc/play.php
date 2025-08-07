@@ -2,8 +2,14 @@
     if (!defined('ENGINE')) {
         die("Hack no attempt!");
     }
-    include 'temp/play.php';
-    
+    echo isLog();
+    if(isLog()){
+        include 'temp/play.php';
+    }else{
+            
+        header('Location: /?site=log');
+    }
+
 ?>
 
 

@@ -1,16 +1,9 @@
 <?php
 
 header('Content-Type: application/json');
-$dbConfig = [
-    'host' => 'localhost',
-    'user' => 'cm36711_diplom',
-    'password' => '@Roman2009',
-    'dbName' => 'cm36711_diplom'
-];
-
-    
-$db2 = mysqli_connect($dbConfig['host'], $dbConfig['user'], $dbConfig['password'], $dbConfig['dbName']);
-
+include_once 'classes.php';
+$db2 = new db($dbConfig['host'], $dbConfig['user'], $dbConfig['password'], $dbConfig['dbName']);
+$db2 = $db2->getConnection();
 if ($_GET['nick']) {
     $nick = $_GET['nick'];
 

@@ -6,15 +6,15 @@ header("Content-Type: application/json");
 $data = json_decode(file_get_contents('php://input'), true);
 $avatar = $data['avatar']; // строка data:image/png;base64,...
 $id = isset($data['id']) ? (int)$data['id'] : 0; // Приводим к числу
-$dbConfig = [
-    'host' => 'localhost',
-    'user' => 'cm36711_diplom',
-    'password' => '@Roman2009',
-    'dbName' => 'cm36711_diplom'
-];
 
-    
-$db = mysqli_connect($dbConfig['host'], $dbConfig['user'], $dbConfig['password'], $dbConfig['dbName']);
+include './classes.php';  
+
+$db = new db($dbConfig['host'], $dbConfig['user'], $dbConfig['password'], $dbConfig['dbName']);
+
+
+ 
+$db = $db->getConnection();
+
 
 if ($id > 0 && preg_match('/^data:image\/\w+;base64,/', $avatar)) {
     $avatar = substr($avatar, strpos($avatar, ',') + 1);

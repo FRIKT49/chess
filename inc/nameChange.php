@@ -1,15 +1,9 @@
 <?
 header('Content-Type: application/json');
-$dbConfig = [
-    'host' => 'localhost',
-    'user' => 'cm36711_diplom',
-    'password' => '@Roman2009',
-    'dbName' => 'cm36711_diplom'
-];
+include './classes.php';  
 
-    
-$db = mysqli_connect($dbConfig['host'], $dbConfig['user'], $dbConfig['password'], $dbConfig['dbName']);
-
+$db = new db($dbConfig['host'], $dbConfig['user'], $dbConfig['password'], $dbConfig['dbName']);
+$db = $db->getConnection();
 $upperCaseRegex = "/[A-Z]/";
 $lowerCaseRegex = "/[a-z]/";
 $rusCaseRegex = "/[А-яа-я]/";
@@ -25,11 +19,25 @@ if($_GET['nick']){
             $resultUniqName = mysqli_query($db, $uniq_name);
 
             if (mysqli_num_rows($resultUniqName) > 0) {
+
+
+                
                 echo json_encode(['success' => false, 'error' => 'Указанное Вами имя с уже зарегистрировано на нашем сайте']);
             }else{
-                // $query = "UPDATE `users` SET `name` = '{$nick}' WHERE `id` = {$id}";
-                // $result = mysqli_query($db, $query);
-                echo json_encode(['success' => true, 'message' => 'Вы успешно изменили имя!', 'nick' => $nick]);
+
+                if ($nick && $id) {
+
+                    $query = "UPDATE `users` SET `name` = '" . mysqli_real_escape_string($db, $nick) . "' WHERE `id` = " . intval($id);
+                    $result = mysqli_query($db, $query);
+                    
+                    session_start();
+                    $_SESSION['name'] = $nick;
+
+                    echo json_encode(['success' => true, 'message' => 'Вы успешно изменили имя!', 'nick' => $nick]);
+                } else {
+                    echo json_encode(['success' => false, 'message' => 'Ошибка изменения имени!', 'nick' => $nick]);
+                }
+
             }
             
         } else {

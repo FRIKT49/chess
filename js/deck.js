@@ -70,6 +70,7 @@ var blackPieces = [
 const figureNames = ['king', 'queen', 'bishop', 'night', 'rook', 'pawn'];
 const figureCount = ['1', '1', '2', '2', '2', '8'];
 var yourTurn = 'white';
+var ig = 0; 
 for (let figure in whitePieces) {
     const name = figureNames[figure];
     const count = figureCount[figure];
@@ -132,7 +133,7 @@ for (let figure in whitePieces) {
         })
         var figurePosLeft = null;
         var figurePosTop = null;
-
+        
 
         $('body').on('mouseup', function () {
             figureClone.css({
@@ -200,7 +201,33 @@ for (let figure in whitePieces) {
 
                                             })
                                             
-                                            
+                                            ig++;
+                                            console.log(ig);
+                                            let x;
+                                            if(pickCords[1]==1){
+                                                x = 'a';
+                                            }else if(pickCords[1]==2){
+                                                x = 'b';
+                                            }else if(pickCords[1]==3){
+                                                x = 'c';
+                                            }else if(pickCords[1]==4){
+                                                x = 'd';
+                                            }else if(pickCords[1]==5){
+                                                x = 'e';
+                                            }else if(pickCords[1]==6){ 
+                                                x = 'f';
+                                            }else if(pickCords[1]==7){
+                                                x = 'g';
+                                            }else if(pickCords[1]==8){
+                                                x = 'h';
+                                            }
+                                            let move = $(`
+                                                <div class="move">
+                                                    <div class="move-number">${ig}</div>
+                                                    <div class="move-notation">${name[0]}${x}${pickCords[0]}</div>
+                                                </div>
+                                            `);
+                                            $('#leftMoves').append(move);
                                         } else {
                                             figureClone.css({
                                                 'left': null,
@@ -393,7 +420,7 @@ for (let figure in blackPieces) {
 
 
                                     if (canIMove(figureCellCordsx, figureCellCordsy, pickCords[1], pickCords[0], nameOfFigure[0], nameOfFigure[1], i, vozmoznieHodi, figureClone)) {
-                                        playOnce()
+                                        playOnce();
 
                                         if (!(figureCellCordsx == $(element).attr('id')[2] && figureCellCordsy == $(element).attr('id')[3])) {
                                             // $('.cell' + $(element).attr('id')[2] + $(element).attr('id')[3]).css({
@@ -420,7 +447,30 @@ for (let figure in blackPieces) {
 
 
                                             })
-
+                                            let x;
+                                            if(pickCords[1]==1){
+                                                x = 'a';
+                                            }else if(pickCords[1]==2){
+                                                x = 'b';
+                                            }else if(pickCords[1]==3){
+                                                x = 'c';
+                                            }else if(pickCords[1]==4){
+                                                x = 'd';
+                                            }else if(pickCords[1]==5){
+                                                x = 'e';
+                                            }else if(pickCords[1]==6){ 
+                                                x = 'f';
+                                            }else if(pickCords[1]==7){
+                                                x = 'g';
+                                            }else if(pickCords[1]==8){
+                                                x = 'h';
+                                            }
+                                            let move = $(`
+                                                <div class="move">
+                                                    <div class="move-notation">${name[0]}${x}${pickCords[0]}</div>
+                                                </div>
+                                            `);
+                                            $('#rightMoves').append(move);
                                         } else {
                                             figureClone.css({
                                                 'left': null,
@@ -514,4 +564,3 @@ obrabotchikVsehDvijeni()
 
 
 var idCount = 0;
-console.log('goida');

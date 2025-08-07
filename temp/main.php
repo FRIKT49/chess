@@ -9,13 +9,14 @@ if (!defined('ENGINE')) {
 <html lang="en">
 
 <head>
-    <title>Document</title>
+    <title>Главная страница - ASDChess</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./styles/bootstrap.min.css">
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/animations.css">
+    <link rel="stylesheet" href="./styles/news.css">
     <script src="./js/jquery.min.js"></script>
     <script src="./js/functions.js"></script>
 
@@ -39,10 +40,13 @@ if (!defined('ENGINE')) {
                 <img src="./img/you.png">
                 <span>You</span>
             </div>
-            <div id="news" class="sideElem">
-                <img src="./img/news.png">
-                <span>News</span>
-            </div>
+            <a href="/?site=news">
+                <div id="news" class="sideElem">
+                    <img src="./img/news.png">
+                    <span>News</span>
+                </div> 
+            </a>
+            
         </div>
         <div id="sideBotWrap">
             <div id="switch" class="sideElem">
@@ -65,6 +69,11 @@ if (!defined('ENGINE')) {
                     <img src="<?= getAvatar(SessionFunc::getUserId()) ?>" id="userImg"><span><?= $userInfo['userName'] ?></span>
                 </div>
                 <div id="topRight">
+                    <?
+                        if($userInfo['userSt']==1){
+                            echo '<a href="/?site=settings"><img src="./img/you.png"></a>';
+                        }
+                    ?>
                     <a href="/?site=settings"><img src="./img/settings.png"></a>
                 </div>
             </div>
@@ -108,11 +117,33 @@ if (!defined('ENGINE')) {
                     </div>
                     
                 </div>
-                <div id="playPlay">
-                    
+                <div id="playInfo">
+                    <div id="playInfoContent">
+                        <div id="playInfoTitle">
+                            <span>Moves</span> 
+
+                        </div>
+                        <div id="moves">
+                            
+                            <div id="leftMoves" class="moves">
+                                <!-- <div class="move">
+                                    <span>#1:ke4</span>
+                                </div> -->
+                            </div>
+                            <div id="betweenMoves"></div>
+                            <div id="rightMoves" class="moves">
+
+                            </div> 
+                        </div>
+                            
+                    </div>
                 </div>
             </div>
+            <div id="newsWrapper">
+
+            </div>
         </div>
+        
     </div>
     <script src="./js/deck.js"></script>
     <script>
@@ -131,7 +162,7 @@ if (!defined('ENGINE')) {
             }
         });
     </script>
-    
+    <script src="./js/news.js"></script>
 </body>
 
 </html>

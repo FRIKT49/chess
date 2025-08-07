@@ -11,11 +11,11 @@ if (!defined('ENGINE')) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Параметры - ASDChess</title>
     <link rel="stylesheet" href="./styles/bootstrap.min.css">
     <link rel="stylesheet" href="./styles/settings.css">
     <link rel="stylesheet" href="./styles/animations.css">
-    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery.min.js"></script> 
     <script src="./js/functions.js"></script>
     
 </head>
@@ -35,7 +35,7 @@ if (!defined('ENGINE')) {
 
 
 
-            <button id="save" type="submit" class="btn btn-primary">Save</button>
+
 
 
 
@@ -62,45 +62,29 @@ if (!defined('ENGINE')) {
             $('#saveName').click(function(e) {
                 let newName = $('#nameInput').val();
 
-                
                 if (newName.trim() !== '') {
-                   fetch('./inc/nameChange.php?nick=' + newName+'&id=<?= SessionFunc::getUserId() ?>')
-                    .then(response => response.json())
-                    .then(data => {
-                        if (!data.success) {
-                            error('danger', data.error,e);
-                        }
-                        if(data.success) {
-                            // Обновляем имя в интерфейсе
-                            $('#name').text(newName);
-                            console.log('goida');
-                            error('success', 'Вы успешно изменили имя!',e);
-                            changeNick = data.nick;
-                             
+                    fetch('./inc/nameChange.php?nick=' + newName + '&id=<?= SessionFunc::getUserId() ?>')
+                        .then(response => response.json())
+                        .then(data => {
+                            if (!data.success) {
+                                error('danger', data.error, e);
+                            }
+                            if (data.success) {
+                                $('#name').text(newName);
+                                error('success', 'Вы успешно изменили имя!', e);
+                                changeNick = data.nick;
 
-                        } 
-                        
-                        
-                    });
+                                // Второй fetch только после успешного первого
+                                
+                                
+                            }
+                        });
                 } else {
                     alert('Name cannot be empty');
                 }
             });
         });
-        $('#save').click(function() {
-            fetch('./inc/settings.php', {
-                method: 'POST',
-                body: JSON.stringify({
-                    name: changeNick
-                })
-            })
-            .then(response => response.json())
-            .then(data => {  
-                window.location.href = './?site=main';
-                
-            })
-
-        });
+        
     </script>    
 
 </body>

@@ -8,15 +8,17 @@ if ($_GET) {
 	$module = $_GET['site'];
 	if ($module == 'log') {
 		$file = 'regLog';
-	} elseif ($module == 'reg') {
+	}elseif ($module == 'reg') {
 		$file = 'regReg';
-	} elseif ($module == 'main') {
+	}elseif ($module == 'main') {
 		$file = 'main';
-	} elseif ($module == 'play') {
+	}elseif ($module == 'play') {
 		$file = 'play';
-	} elseif ($module == 'settings') {
+	}elseif ($module == 'settings') { 
 		$file = 'settings';
-	} elseif ($module == 'game') {
+	}elseif ($module == 'news') {
+		$file = 'newsPage';
+	}elseif ($module == 'game') {
 		$file = 'game';
 	} else {
 		if (empty($module)) $file = 'regLog';

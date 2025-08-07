@@ -1,0 +1,146 @@
+@font-face{
+    font-family: "chess-sans700";
+    src:url('../fonts/chess-sans-700.ttf');
+}
+#newsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 100px;
+    justify-content: space-between;
+    
+    align-items: flex-start;
+    font-family: "chess-sans700" !important;
+}
+.newsItem{
+
+    width:45%;
+    min-height:300px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    
+    & a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 15px;
+        transition: all 0.1s ease;
+    }
+    & a:hover{
+        color: #a4a4a4;
+    }
+    & div{
+        display: flex;
+        justify-content: center;
+        margin-top:20px;
+        height: 100%;
+    }
+} 
+#newsWrap{ 
+    width:800px;
+    min-height: 300px;
+    gap: 20px;
+    font-family: "chess-sans700" !important;
+}
+#newsTopLine{
+    height:80px;
+    display: flex;
+    align-items:center;
+    gap:20px;
+    font-size: 30px;
+    color:#ccc;
+    & img{
+        width:60px; 
+    }
+}
+.newsItems{
+    border-radius: 5px;
+    background-color: #262522;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.newsItemsFirst{ 
+    & img{
+        width:100%;
+    }
+    & a{
+        text-decoration: none;
+        color: #f1f1f1;
+    }
+
+}
+.newsTitleFirst{
+    padding: 25px;
+    font-size: 25px;
+}
+.newsItemsNorm{
+    display: flex;
+
+    position: relative;
+    padding: 40px 20px 20px 20px;
+    & img{
+        width:400px;
+        height:250px;
+        float:left;  
+    }  
+    & a{
+        text-decoration: none;
+        color: #f1f1f1;
+    }
+
+    
+}
+.newsTitleNorm  {
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    line-height:22px ;
+    margin-bottom: 20px;
+    & a{
+        font-size: 22px;
+    }
+    
+}
+.newsInfo{
+    color:hsla(0,0%,100%,.72);
+    font-size: 13px;
+    font-stretch: condensed;
+    line-height:17px ;
+    padding-top: 15px;
+}
+.NewsText{
+    position: absolute;
+    left:20px;
+    top:10px;
+    color:white;
+}
+#login{
+    background-color:#81b64c ;
+    font-weight: 1000;
+    color:white;
+    font-size:24px;
+    height:65px;
+    width: 290px;
+    top: 60px;
+    left:15px;
+    position: relative;
+    border:none;
+    border-radius: 9px;
+    box-shadow: #45753c 0px 4px;
+    transition: all 0.5s ease-in-out;
+    &:hover{
+        background-color:#a3d160;
+        
+    }
+    &:hover .loginShadow{
+        box-shadow: #a3d160 0px 0px 10px;
+        height:60px;
+        width: 280px;
+        position:absolute;
+        top:5px;
+        left:5px;
+        
+    }
+}
+#login span{
+    text-shadow: #262421 0px 0.5px;
+}

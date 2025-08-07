@@ -1,7 +1,8 @@
 <?php
     session_start();
     define('ENGINE', true);
-    
+
+    include 'inc/classes.php';
     #Подключение базы данных
     include 'db/db.php';
     #Подключение массива функций

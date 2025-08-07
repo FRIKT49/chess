@@ -27,7 +27,7 @@ html, body {
     height:100%;
 
     background-color: #262522;
-    position: relative;
+    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -161,7 +161,7 @@ html, body {
     margin-top: 30px;
     display:flex;
 
-    justify-content: center;
+    justify-content: space-between;
 }
 
 #deck{
@@ -207,7 +207,69 @@ html, body {
     z-index: 0;
     
 }
-#playPlay{
+#playInfo{
     height:700px;
-    width:0px;
+    width:400px;
+    background-color: #262522;
+    border-radius: 15px; 
+    padding: 10px;
+}
+#playInfoContent{
+    background-color: #43403d;
+    height:100%;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 100px;
+} 
+#playInfoTitle{
+    width:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:80px;
+    & span{
+        color: #f1f1f1;
+        font-size: 30px;
+        font-weight: 600;
+    }
+}
+#moves{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        width: 0px;
+        background: transparent; 
+    }
+
+}
+.moves{
+    width:40%;
+    height: 100%;
+}
+#betweenMoves{
+    width:3px;
+    height:100%;
+    border: 2px solid #7a7a7a;
+    border-radius: 5px;
+    
+}
+.move{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    color: #f1f1f1;
+    font-size: 20px;
+    cursor: pointer;
+    gap: 20px;
 }

@@ -1,7 +1,9 @@
 <?php
 	
- 
-	
+
+	function error($type, $message){
+        echo "<script>error('{$type}', '{$message}')</script>";
+    }
     function dump($var){
         echo "<pre style='position:absolute; top:300px; left:500px; color:white; z-index: 999999;' >";
 			var_dump($var);
@@ -51,6 +53,7 @@
         
 
 	}
+    
 	class Relocations{
 		public static function toMain(){
 			header('Location: /?site=main');
@@ -61,9 +64,7 @@
 		public static function toProfile(){
 			header('Location: /?site=profile');
 		}
-		public static function toError($error){
-			header("Location: /?site=error&error={$error}");
-		}
+
 	}
 	function getAvatar($id){
 		global $db;
