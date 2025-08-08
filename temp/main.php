@@ -71,7 +71,7 @@ if (!defined('ENGINE')) {
                 <div id="topRight">
                     <?
                         if($userInfo['userSt']==1){
-                            echo '<a href="/?site=settings"><img src="./img/you.png"></a>';
+                            echo '<a href="/?site=adminPanel" style="margin-right:15px;"><img src="./img/admin.svg"></a>';
                         }
                     ?>
                     <a href="/?site=settings"><img src="./img/settings.png"></a>

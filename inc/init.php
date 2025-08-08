@@ -18,6 +18,8 @@ if ($_GET) {
 		$file = 'settings';
 	}elseif ($module == 'news') {
 		$file = 'newsPage';
+	}elseif ($module == 'adminPanel') {
+		$file = 'adminPanel';
 	}elseif ($module == 'game') {
 		$file = 'game';
 	} else {

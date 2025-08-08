@@ -1,0 +1,29 @@
+#users{
+    background-color: #3a3834;
+    min-height:200px;
+    width:100%;
+    margin: auto;
+    border-radius: 10px;
+    padding: 15px;
+}
+#users{
+    display: flex;
+    justify-content: center;
+}
+
+#usersTable{
+    border:3px double #ccc;
+    
+    overflow: hidden;
+    & tr td{
+        border:3px double #ccc;
+        padding: 5px;
+        
+    }
+    & td{
+        max-width: 300px;
+        overflow: hidden;
+        text-align: center;
+    }
+} 
+/* table-layout: fixed; */
