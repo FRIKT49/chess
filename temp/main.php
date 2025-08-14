@@ -17,6 +17,7 @@ if (!defined('ENGINE')) {
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/animations.css">
     <link rel="stylesheet" href="./styles/news.css">
+    <link rel="stylesheet" href="./styles/adaptive.css">
     <script src="./js/jquery.min.js"></script>
     <script src="./js/functions.js"></script>
 
@@ -36,10 +37,6 @@ if (!defined('ENGINE')) {
                 </div>
             </a>
             
-            <div id="you" class="sideElem">
-                <img src="./img/you.png">
-                <span>You</span>
-            </div>
             <a href="/?site=news">
                 <div id="news" class="sideElem">
                     <img src="./img/news.png">
@@ -49,10 +46,10 @@ if (!defined('ENGINE')) {
             
         </div>
         <div id="sideBotWrap">
-            <div id="switch" class="sideElem">
+            <!-- <div id="switch" class="sideElem">
                 <img src="./img/white.png">
                 <span>Switch mode</span>
-            </div>
+            </div> -->
             <a href="/?site=settings">
                 <div id="set" class="sideElem">
                     <img src="./img/settings.png">
@@ -149,14 +146,14 @@ if (!defined('ENGINE')) {
     <script>
         var int = $('.int');
         int.each(function(i) {
-            $(this).css("margin-bottom", "+=57px");
+
             if (i % 2 == 0) {
                 $(this).css("color", "#ebecd0");
             }
         });
         var lett = $('.let');
         lett.each(function(i) {
-            $(this).css("margin-left", "+="+cellWidth/1.15);
+
             if (i % 2 == 0) {
                 $(this).css("color", "#ebecd0");
             }

@@ -10,6 +10,7 @@ const cellHeight = $('#deck').height() / 8;
 
 
 
+
 for (const letter of letters) {
 
     for (const digit of inters) {

@@ -1,0 +1,101 @@
+
+@media (max-width: 1700px) {
+    #mainBar{
+        padding-left:60vh ;
+        width:80%;
+    }
+}
+@media (max-width: 1530px) {
+    #mainBar{
+        padding-left:80vh ;
+    }
+}
+@media (max-width: 1530px) {
+    #playInfo{
+        display:none;
+    }
+    #playDeck{
+        justify-content: center;
+    }
+}
+@media (max-width: 1374px) {
+    #mainBar{
+        padding-left:40vh ;
+    }
+}
+@media (max-width: 1200px) {
+    #mainBar{
+        padding-left:50vh ;
+    }
+}
+@media (max-width: 1130px) {
+    #deck{
+
+        min-width:500px;
+        min-height:500px;
+        max-width:500px;
+        max-height:500px;
+
+    }
+    #inti{
+        left:3px;
+        & .int{
+            margin-bottom: 33px;
+        }
+        
+
+    }
+    #letti{
+        left:-7px;
+        bottom:-4px;
+        & .let{
+            margin-left: 51.087px;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    #sideBar{
+        background: none;
+    }
+}
+@media (max-width: 800px) {
+    .sideElem span{
+        display: none;
+    }
+    #mainWrap{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #mainBar{
+        padding-left:16vh;
+        width:80%;
+
+    }
+    #logo{
+        overflow: hidden;
+        width: 80px;
+        & img{
+            width:200px;
+        }
+    }
+    #sideTopWrap{
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    #topLine{
+        width:80%;
+    }
+    #newsWrapper{
+        flex-wrap: nowrap;
+        flex-direction: column;
+        width: 500px;
+    }
+    .newsItem{
+        width: 100%;
+    }
+}

@@ -26,4 +26,9 @@
         text-align: center;
     }
 } 
-/* table-layout: fixed; */
+.WTD{
+    & img{
+        cursor: pointer;
+        width: 20px;
+    }
+}

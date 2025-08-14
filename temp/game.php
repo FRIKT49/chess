@@ -35,10 +35,7 @@ if (!defined('ENGINE')) {
                 </div>
             </a>
 
-            <div id="you" class="sideElem">
-                <img src="./img/you.png">
-                <span>You</span>
-            </div>
+
             <a href="/?site=news">
                 <div id="news" class="sideElem">
                     <img src="./img/news.png">
@@ -47,10 +44,10 @@ if (!defined('ENGINE')) {
             </a>
         </div>
         <div id="sideBotWrap">
-            <div id="switch" class="sideElem">
+            <!-- <div id="switch" class="sideElem">
                 <img src="./img/white.png">
                 <span>Switch mode</span>
-            </div>
+            </div> -->
             <a href="/?site=settings">
                 <div id="set" class="sideElem">
                     <img src="./img/settings.png">

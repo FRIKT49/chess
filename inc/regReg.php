@@ -79,10 +79,14 @@ if (!isLog()) {
             )";
 
             if (mysqli_query($db, $SQL)) {
-                $isReg = true;
+
+                $user_id = mysqli_insert_id($db);
+                if(session_status() !== PHP_SESSION_ACTIVE) session_start();
+                $_SESSION['id'] = $user_id;
+                $_SESSION['name'] = $namereg;
                 Relocations::toMain();
             } else {
-                $isReg = false;
+
                 $error = 'Ошибка при регистрации';
             }
         }

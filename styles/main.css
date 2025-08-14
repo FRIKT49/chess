@@ -116,11 +116,16 @@ html, body {
 #mainWrap{
     min-height:820px;
     width:1120px;
+    /* overflow: hidden; */
+    min-width:700px;
+    min-height:700px;
 }
 #mainBar{
     width: 100%;
     display: flex;
     justify-content: center;
+    min-width:700px;
+    min-height:700px;
 }
 .userInfo{
     display: flex;
@@ -166,8 +171,10 @@ html, body {
 
 #deck{
     background-image: url('../img/deck.png');
-    width:700px;
-    height:700px;
+    min-width:700px;
+    min-height:700px;
+    max-width:700px;
+    max-height:700px;
     background-size: 100% 100%;
     border-radius: 5px;
     position: relative;
@@ -182,6 +189,8 @@ html, body {
     display: flex;
     flex-direction: column-reverse;
     user-select: none;
+   
+
 }
 #letti{
     position: absolute;
@@ -195,11 +204,13 @@ html, body {
     font-family: chess;
     font-size: 20px;
     color: #739552;
+    margin-left: 76.087px;
 }
 .int{
     font-family: chess;
     font-size: 20px;
     color: #739552;
+    margin-bottom: 57px;
 }
 
 .figure{
